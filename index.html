@@ -27,6 +27,10 @@
 
 <body>
 	<script>
+		Number.prototype.mod = function (n) {
+  			"use strict";
+  			return ((this % n) + n) % n;
+		};
 		const Wyklad = {
 			1: 4,
 			11: 18,
