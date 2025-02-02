@@ -27,10 +27,9 @@
 
 <body>
 	<script>
-		Number.prototype.mod = function (n) {
-  			"use strict";
-  			return ((this % n) + n) % n;
-		};
+		function mod(n, m) {
+ 			return ((n % m) + m) % m;
+		}
 		const Wyklad = {
 			1: 4,
 			11: 18,
@@ -133,8 +132,8 @@
 		}
 		myFunction = () => {
 			const index = Number(document.getElementById("Index").value);
-			const wk = index % 122;
-			const cw = index % 187;
+			const wk = mod(index, 122);
+			const cw = mod(index, 187);
 			const wyklad = Wyklad[wk];
 			const cwiczenia = Cwiczenia[cw];
 			let punkty_wyklad = 0;
