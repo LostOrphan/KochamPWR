@@ -138,10 +138,10 @@
 			const cwiczenia = Cwiczenia[cw];
 			let punkty_wyklad = 0;
 			let punkty_cwiczenia = 0;
-			while ((index + punkty_wyklad) % 21 != wyklad && index != undefined) {
+			while ((index + punkty_wyklad) % 21 != wyklad && wyklad != undefined) {
 				punkty_wyklad++;
 			}
-			while ((index + punkty_cwiczenia) % 21 != cwiczenia && index != undefined) {
+			while ((index + punkty_cwiczenia) % 21 != cwiczenia && cwiczenia != undefined) {
 				punkty_cwiczenia++;
 			}
 			document.getElementById("demo").innerHTML = `Wyklad: ${punkty_wyklad}, Cwiczenia: ${punkty_cwiczenia}`;
